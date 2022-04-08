@@ -1,6 +1,6 @@
 <?php
 
-namespace Abedimostafa\ToDo;
+namespace AbediMostafa\ToDo;
 
 use \Illuminate\Support\ServiceProvider;
 

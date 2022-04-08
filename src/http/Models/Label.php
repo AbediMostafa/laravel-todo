@@ -1,6 +1,6 @@
 <?php
 
-namespace Abedimostafa\ToDo\http\Models;
+namespace AbediMostafa\ToDo\http\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany ;

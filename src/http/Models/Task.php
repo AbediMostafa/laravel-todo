@@ -1,6 +1,6 @@
 <?php
 
-namespace Abedimostafa\ToDo\http\Models;
+namespace AbediMostafa\ToDo\http\Models;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;

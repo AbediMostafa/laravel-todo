@@ -1,8 +1,8 @@
 <?php
 
-namespace Abedimostafa\ToDo\http\Models\Traits;
+namespace AbediMostafa\ToDo\http\Models\Traits;
 
-use Abedimostafa\ToDo\http\Models\Task;
+use AbediMostafa\ToDo\http\Models\Task;
 use \Illuminate\Database\Eloquent\Relations\HasMany;
 
 trait ExtendedUser
