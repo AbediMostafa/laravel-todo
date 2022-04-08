@@ -1,0 +1,26 @@
+{
+    "name": "abedimostafa/to_do",
+    "description": "This package adds Todo ability to the main laravel project",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Abedimostafa\\ToDo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mostafa Abedi",
+            "email": "mostafaaabedi@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abedimostafa\\ToDo\\ToDoServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
