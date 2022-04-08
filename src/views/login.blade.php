@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('todo::layouts.app')
 
 @section('content')
     <h1>

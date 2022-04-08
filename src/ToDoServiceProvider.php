@@ -4,7 +4,7 @@ namespace AbediMostafa\ToDo;
 
 use \Illuminate\Support\ServiceProvider;
 
-class TodoServiceProvider extends ServiceProvider
+class ToDoServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -12,7 +12,7 @@ class TodoServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/views', 'todo');
         $this->publishes([
             __DIR__.'/assets' => public_path('vendor/todo'),
-        ], 'public');
+        ], 'todo-app');
 
     }
 

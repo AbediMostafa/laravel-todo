@@ -7,13 +7,17 @@
     <title>Todo Package</title>
 
     <!-- Styles -->
-    <link href="vendor/todo/css/fonts.css" rel="stylesheet">
-    <link href="vendor/todo/css/element.css" rel="stylesheet">
+    <link href="{{ asset('vendor/todo/css/fonts.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/todo/css/element.css') }}" rel="stylesheet">
+{{--    <link href="vendor/todo/css/fonts.css" rel="stylesheet">--}}
+{{--    <link href="vendor/todo/css/element.css" rel="stylesheet">--}}
     <!-- Styles -->
 
     <!-- Scripts -->
-    <script src="/vendor/todo/js/vue.js"></script>
-    <script src="/vendor/todo/js/element.js"></script>
+    <script src="{{ asset('/vendor/todo/js/vue.js') }}"></script>
+    <script src="{{ asset('/vendor/todo/js/element.js') }}"></script>
+{{--    <script src="/vendor/todo/js/vue.js"></script>--}}
+{{--    <script src="/vendor/todo/js/element.js"></script>--}}
     <!-- Scripts -->
 </head>
 <body>
