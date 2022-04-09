@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany ;
 
 class Label extends Model
 {
+    protected $fillable = ['label'];
+
     /**
      * Get the tasks of the label
      */

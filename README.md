@@ -18,11 +18,11 @@ composer require abedimostafa/laravel-todo-package
 You can publish and run the migrations with:
 
 ```
-php artisan vendor:publish --tag="todo-app"
+php artisan vendor:publish --tag="todo-app" --force
 php artisan migrate
 ```
 
-For getting access to the authenticated user and relation methods add ExtendedUser trait to the User model :
+- For getting access to the authenticated user and relation methods add ExtendedUser trait to the User model :
 
 ```
 use AbediMostafa\ToDo\http\Models\Traits\ExtendedUser;
@@ -34,11 +34,7 @@ class User extends Authenticatable
 
 ## Usage
 
-```php
-$laravelTodoPackage = new AbediMostafa\LaravelTodoPackage();
-echo $laravelTodoPackage->echoPhrase('Hello, AbediMostafa!');
-```
-
+It's all set, hit /login url and enjoy the package
 ## Testing
 
 ```bash

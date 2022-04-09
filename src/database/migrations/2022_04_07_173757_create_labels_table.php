@@ -15,12 +15,7 @@ class CreateLabelsTable extends Migration
     {
         Schema::create('labels', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-
-            //Hexadecimal value of the color
-            $table->string('color', 6);
-            $table->string('back_color', 6);
-
+            $table->string('label')->unique();
             $table->timestamps();
         });
     }
