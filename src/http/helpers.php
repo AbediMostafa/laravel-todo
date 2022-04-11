@@ -5,7 +5,7 @@
  * and return given error or success message
  */
 if (!function_exists('tryCatch')) {
-    function tryCatch($callBack, $error, $success, $additionalArray = []): array
+    function tryCatch($callBack, $error, $success, $additionalArray = []): \Illuminate\Http\JsonResponse
     {
         try {
             $callBack();
@@ -15,15 +15,15 @@ if (!function_exists('tryCatch')) {
             ];
 
             return empty($additionalArray) ?
-                $successArray :
-                array_merge($successArray, $additionalArray);
+                response()->json($successArray) :
+                response()->json(array_merge($successArray, $additionalArray));
 
         } catch (Exception $e) {
 
-            return [
+            return response()->json([
                 'status' => 0,
                 'msg' => $error
-            ];
+            ]);
         }
 
     }

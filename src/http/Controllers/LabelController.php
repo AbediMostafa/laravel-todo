@@ -54,9 +54,10 @@ class LabelController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param AddLabelRequest $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function store(AddLabelRequest $request):array
+    public function store(AddLabelRequest $request):\Illuminate\Http\JsonResponse
     {
         return tryCatch(function () use ($request) {
             Label::create($request->all());

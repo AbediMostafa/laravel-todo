@@ -30,7 +30,7 @@ class AuthController extends Controller
     /**
      * Handles register process
      */
-    public function handleRegister(RegisterUserRequest $request): array
+    public function handleRegister(RegisterUserRequest $request): \Illuminate\Http\JsonResponse
     {
         $token = Str::random(80);
 

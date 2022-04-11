@@ -75,7 +75,10 @@
                         </div>
                         <div class="text-center">
                             <div @click="register" id="kt_sign_up_submit" class="btn btn-lg btn-primary">
-                                <span class="indicator-label">Submit</span>
+                                 <span v-if="isProcessing" class="indicator-progress">Please wait...
+									<span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                </span>
+                                <span v-else class="indicator-label">Submit</span>
                             </div>
                         </div>
                     </form>
@@ -88,6 +91,7 @@
         const app = Vue.createApp({
             data() {
                 return {
+                    isProcessing:false,
                     credentials: {
                         name: '',
                         email: '',
@@ -98,13 +102,17 @@
             },
             methods: {
                 register() {
+                    this.isProcessing = true;
                     axios.post('/register', this.credentials)
                         .then(response => {
-                            console.log(response);
+                            this.isProcessing = false;
                             parseResponse(response);
                             handleLogin(response);
                         })
-                        .catch(error => handleErrorValidation(error))
+                        .catch(error => {
+                            this.isProcessing = false;
+                            handleErrorValidation(error)
+                        })
                 }
             }
 

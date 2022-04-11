@@ -21,9 +21,11 @@ class Task extends Model
             // if status changed
             if (array_key_exists('status', $task->getDirty())) {
 
-                // task closed
+                // if task closed
                 if (!$task->status) {
-                    Auth::user()->notify(new TaskClosedNotification($task));
+                    dispatch(function() use ($task){
+                        Auth::user()->notify(new TaskClosedNotification($task));
+                    })->afterResponse();
                 }
             }
         });

@@ -116,6 +116,8 @@
                 editTask() {
                     this.isUpdating = true;
 
+                    delete this.task.labels;
+
                     const data = {
                         task: this.task,
                         labels: this.selectedLabels

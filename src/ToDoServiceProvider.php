@@ -12,11 +12,12 @@ class ToDoServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__ . '/routes/api.php');
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
         $this->loadViewsFrom(__DIR__ . '/views', 'todo');
 
         $this->publishes([
             __DIR__ . '/assets' => public_path('vendor/todo'),
+            __DIR__.'/database/migrations'=>database_path('migrations'),
+            __DIR__.'/database/factories'=>database_path('factories')
         ], 'todo-app');
 
     }

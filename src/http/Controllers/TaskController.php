@@ -41,10 +41,8 @@ class TaskController extends Controller
 
     /**
      * Change status of the task
-     *
-     * @return array
      */
-    public function changeStatus(Request $request)
+    public function changeStatus(Request $request): \Illuminate\Http\JsonResponse
     {
         return tryCatch(function () use ($request){
             Task::findOrFail($request->id)
@@ -82,7 +80,7 @@ class TaskController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      */
-    public function store(AddTaskRequest $request): array
+    public function store(AddTaskRequest $request):  \Illuminate\Http\JsonResponse
     {
         return tryCatch(function () use ($request) {
             $request->merge(['user_id' => Auth::id()]);
@@ -98,7 +96,7 @@ class TaskController extends Controller
      * Display the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response|\Illuminate\Contracts\Routing\ResponseFactory
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show($id)
     {
@@ -131,7 +129,7 @@ class TaskController extends Controller
      * @param \Illuminate\Http\Request $request
      * @param int $id
      */
-    public function update(UpdateTaskRequest $request, $id): array
+    public function update(UpdateTaskRequest $request, $id)
     {
         return tryCatch(function () use ($request, $id) {
             $task = Task::findOrFail($id);

@@ -96,6 +96,7 @@
                 getLabels() {
                     axios.get('/api/labels')
                         .then(response => {
+                            console.log(response);
                             this.labels = response.data.data;
                         })
                         .catch(error => {
