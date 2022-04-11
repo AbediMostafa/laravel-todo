@@ -35,11 +35,6 @@ class User extends Authenticatable
 ## Usage
 
 It's all set, hit /login url and enjoy the package
-## Testing
-
-```bash
-composer test
-```
 
 - [Mostafa Abedi](https://www.linkedin.com/in/mostafa-abedi-081785157/)
 
