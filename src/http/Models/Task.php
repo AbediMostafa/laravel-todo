@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use \Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use \Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class Task extends Model
@@ -20,11 +21,15 @@ class Task extends Model
 
             // if status changed
             if (array_key_exists('status', $task->getDirty())) {
-
                 // if task closed
                 if (!$task->status) {
-                    dispatch(function() use ($task){
-                        Auth::user()->notify(new TaskClosedNotification($task));
+                    dispatch(function () use ($task) {
+                        try {
+                            Auth::user()->notify(new TaskClosedNotification($task));
+
+                        } catch (\Exception $e) {
+                            Log::error($e->getMessage());
+                        }
                     })->afterResponse();
                 }
             }

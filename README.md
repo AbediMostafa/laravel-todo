@@ -32,7 +32,9 @@ class User extends Authenticatable
     use Notifiable,ExtendedUser;
 ```
 
-***** be sure to use ExtendedUser with correct namespace *****
+##considerations
+- Be sure to use ExtendedUser with correct namespace
+- Set up the email configuration in then .env file before using the package
 
 ## Usage
 
