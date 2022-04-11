@@ -12,7 +12,7 @@ This package adds Todo ability to the main laravel project
 You can install the package via composer:
 
 ```bash
-composer require abedimostafa/laravel-todo-package
+composer require abedimostafa/to_do
 ```
 
 You can publish and run the migrations with:
