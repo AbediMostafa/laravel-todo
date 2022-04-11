@@ -17,7 +17,7 @@ class Task extends Model
 
     protected static function booted()
     {
-        static::saving(function ($task) {
+        static::updating(function ($task) {
 
             // if status changed
             if (array_key_exists('status', $task->getDirty())) {
