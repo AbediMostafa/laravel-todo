@@ -17,10 +17,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AbediMostafa\\ToDo\\ToDoServiceProvider"
+                "Abedimostafa\\ToDo\\ToDoServiceProvider"
             ]
         }
     },
     "minimum-stability": "dev",
     "require": {}
 }
+
