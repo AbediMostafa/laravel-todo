@@ -32,6 +32,8 @@ class User extends Authenticatable
     use Notifiable,ExtendedUser;
 ```
 
+***** be sure to use ExtendedUser with correct namespace *****
+
 ## Usage
 
 It's all set, hit /login url and enjoy the package
