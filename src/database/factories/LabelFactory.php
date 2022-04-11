@@ -9,6 +9,6 @@ use \Illuminate\Support\Str;
 
 $factory->define(Label::class, function (Faker $faker) {
     return [
-        'labedl'=>Str::random(10)
+        'label'=>Str::random(10)
     ];
 });
