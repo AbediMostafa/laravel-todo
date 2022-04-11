@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Abedimostafa\\ToDo\\": "src/"
+            "AbediMostafa\\ToDo\\": "src/"
         }
     },
     "authors": [
@@ -17,7 +17,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Abedimostafa\\ToDo\\ToDoServiceProvider"
+                "AbediMostafa\\ToDo\\ToDoServiceProvider"
             ]
         }
     },
