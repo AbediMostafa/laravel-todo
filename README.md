@@ -29,7 +29,7 @@ class User extends Authenticatable
 
 ## considerations
 - Be sure to use ExtendedUser with correct namespace
-- Set up the email configuration in then .env file before using the package
+- Set up the email configuration in the .env file before using the package
 
 ## Usage
 
