@@ -1,4 +1,4 @@
-# Laravel Todo package
+# Laravel labaling system
 
 This package adds Todo ability to the main laravel project
 
